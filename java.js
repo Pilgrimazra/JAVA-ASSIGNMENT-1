@@ -29,8 +29,24 @@ library.push({
     available: true
 });
 
+console.log(library);
 
-                //updating the Library
+//Get a List of All Book Title.
+const titles=library.map(item=> item.title);
+console.log(titles);
+
+// Output seperated using join and ,
+const word=titles.join(",");
+console.log(word);
+
+// using the slice method 
+
+let newArrivals=titles.slice(2);
+console.log(newArrivals);
+
+
+
+//                 //updating the Library
 
 // Finding the index of "1984"
 const index1984 = library.findIndex(book => book.title === "1984");
@@ -49,6 +65,18 @@ const indexPrideAndPrejudice = library.findIndex(book => book.title === "Pride a
 if (indexPrideAndPrejudice !== -1) {
     library.splice(indexPrideAndPrejudice, 1);
 }
+
+
+
+// using the unshift 
+library.unshift({
+    tittle:"The Catcher",
+    author:"J.D. Sailinger",
+    year:"1951",
+    available:true
+});
+
+console.log(library);
 
 // Final resulting
 
